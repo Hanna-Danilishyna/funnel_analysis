@@ -1,0 +1,2 @@
+data/raw/events.csv filter=lfs diff=lfs merge=lfs -text
+data/processed/cleaned_events.csv filter=lfs diff=lfs merge=lfs -text
