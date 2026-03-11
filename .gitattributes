@@ -1,2 +1,8 @@
 data/raw/events.csv filter=lfs diff=lfs merge=lfs -text
 data/processed/cleaned_events.csv filter=lfs diff=lfs merge=lfs -text
+data/processed/avg_price_by_category.csv filter=lfs diff=lfs merge=lfs -text
+data/processed/top_products.csv filter=lfs diff=lfs merge=lfs -text
+data/processed/user_funnel.csv filter=lfs diff=lfs merge=lfs -text
+plots/*.png filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
