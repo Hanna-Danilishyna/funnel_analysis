@@ -57,36 +57,32 @@ Libraries used:
 
 # 📁 Project Structure
 funnel_analysis
-│
-├── data
-│ ├── raw
-│ └── processed
-│
-│
-├── plots
-│ ├── user_funnel.png
-│ ├── top_products.png
-│ └── avg_price_by_brand.png
-│
-│
-├── python
-│ ├── cleaned_events_sample.py
-│ ├── data_cleaning.py
-│ ├── export_data.py
-│ ├── funnel_analysis.py
-│ ├── product_analysis.py
-│ └── visualization.png
-│
-│
-├── sql
-│ ├── 01_data_exploration.sql
-│ ├── 02_event_distribution.sql
-│ ├── 03_funnel_analysis.sql
-│ ├── 04_product_analysis.sql
-│ └── 05_revenue_metrics.sql
-│
-│
-└── README.md
+  data
+    raw
+    processed
+
+  plots
+    user_funnel.png
+    top_products.png
+    avg_price_by_brand.png
+
+  python
+    cleaned_events_sample.py
+    data_cleaning.py
+    export_data.py
+    funnel_analysis.py
+    product_analysis.py
+    visualization.png
+
+
+  sql
+    01_data_exploration.sql
+    02_event_distribution.sql
+    03_funnel_analysis.sql
+    04_product_analysis.sql
+    05_revenue_metrics.sql
+
+README.md
 
 
 ---
