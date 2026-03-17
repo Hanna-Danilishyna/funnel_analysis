@@ -2,18 +2,13 @@ import pandas as pd
 import psycopg2
 from pathlib import Path
 
-# -------------------------
-# PATHS
-# -------------------------
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = BASE_DIR / "data/processed"
 
 OUTPUT_DIR.mkdir(exist_ok=True)
 
-# -------------------------
-# DB CONNECTION
-# -------------------------
 
 conn = psycopg2.connect(
     dbname="funnel_analysis",
@@ -22,9 +17,9 @@ conn = psycopg2.connect(
     port="5432"
 )
 
-# -------------------------
+
 # 1. USER FUNNEL
-# -------------------------
+
 
 funnel_query = """
 
@@ -66,9 +61,9 @@ funnel_df.to_csv(
 print("Exported: funnel_metrics.csv")
 
 
-# -------------------------
+
 # 2. TOP PRODUCTS
-# -------------------------
+
 
 top_products_query = """
 
@@ -101,9 +96,9 @@ top_products_df.to_csv(
 print("Exported: top_products.csv")
 
 
-# -------------------------
+
 # 3. CATEGORY PERFORMANCE
-# -------------------------
+
 
 category_query = """
 
@@ -134,9 +129,9 @@ category_df.to_csv(
 print("Exported: category_performance.csv")
 
 
-# -------------------------
+
 # 4. HOURLY USER BEHAVIOR
-# -------------------------
+
 
 hour_query = """
 
@@ -165,9 +160,9 @@ hour_df.to_csv(
 print("Exported: hourly_behavior.csv")
 
 
-# -------------------------
+
 # 5. WEEKDAY BEHAVIOR
-# -------------------------
+
 
 weekday_query = """
 
@@ -194,4 +189,4 @@ weekday_df.to_csv(
 print("Exported: weekday_behavior.csv")
 
 
-print("\nAll analytics tables exported successfully.")
+print("\nAll tables exported successfully.")
