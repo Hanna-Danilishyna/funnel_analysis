@@ -56,6 +56,7 @@ Libraries used:
 ---
 
 # 📁 Project Structure
+```
 funnel_analysis
   data
     raw
@@ -83,6 +84,7 @@ funnel_analysis
     05_revenue_metrics.sql
 
 README.md
+```
 
 
 ---
