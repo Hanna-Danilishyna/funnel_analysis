@@ -4,15 +4,15 @@ import seaborn as sns
 from pathlib import Path
 import psycopg2
 
-# стиль графиков
+# style
 sns.set_style("whitegrid")
 
-# пути проекта
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 PLOTS_DIR = BASE_DIR / "plots"
 PLOTS_DIR.mkdir(exist_ok=True)
 
-# подключение к PostgreSQL
+# connect PostgreSQL
 conn = psycopg2.connect(
     dbname="funnel_analysis",
     user="ankapdf",
@@ -20,9 +20,9 @@ conn = psycopg2.connect(
     port="5432"
 )
 
-# ---------------------------
+
 # FUNNEL DATA
-# ---------------------------
+
 
 funnel_query = """
 
@@ -52,9 +52,9 @@ FROM user_funnel
 
 funnel_df = pd.read_sql(funnel_query, conn)
 
-# ---------------------------
+
 # PRODUCT DATA
-# ---------------------------
+
 
 product_query = """
 
@@ -77,12 +77,12 @@ LIMIT 20
 
 product_df = pd.read_sql(product_query, conn)
 
-# убираем unknown
+# delete unknown
 product_df = product_df[product_df["brand"] != "unknown"]
 
-# ---------------------------
+
 # USER FUNNEL PLOT
-# ---------------------------
+
 
 steps = ["view_users", "cart_users", "purchase_users"]
 values = funnel_df.loc[0, steps]
@@ -106,9 +106,9 @@ plt.savefig(PLOTS_DIR / "user_funnel.png")
 
 plt.close()
 
-# ---------------------------
+
 # TOP PRODUCTS BY PURCHASES
-# ---------------------------
+
 
 product_purchase = product_df.sort_values(
     by="purchase_count",
@@ -135,9 +135,9 @@ plt.savefig(PLOTS_DIR / "top_products.png")
 
 plt.close()
 
-# ---------------------------
+
 # AVERAGE PRICE BY BRAND
-# ---------------------------
+
 
 product_price = product_df.sort_values(
     by="avg_price",
