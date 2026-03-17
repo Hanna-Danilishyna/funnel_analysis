@@ -1,6 +1,6 @@
-# 🛒 E-commerce User Behavior & Conversion Funnel Analysis
+# E-commerce User Behavior & Conversion Funnel Analysis
 
-## 📌 Project Overview
+## Project Overview
 
 This project analyzes **user interaction data from an e-commerce platform** to understand how customers move through the purchasing process and what factors influence conversions.
 
@@ -15,7 +15,7 @@ The goal is to identify **conversion bottlenecks**, uncover **high-performing pr
 
 ---
 
-# 📊 Dataset
+# Dataset
 
 This project uses the **E-commerce Behavior Data from Multi-Category Store** dataset.
 
@@ -42,7 +42,7 @@ Due to GitHub file size limitations, the full dataset is **not included in this 
 
 ---
 
-# 🛠 Tech Stack
+# Tech Stack
 
 Python
 
@@ -55,7 +55,7 @@ Libraries used:
 
 ---
 
-# 📁 Project Structure
+# Project Structure
 ```
 funnel_analysis
   data
@@ -89,13 +89,13 @@ README.md
 
 ---
 
-# 🔎 Analysis
+# Analysis
 
 The analysis consists of several key components.
 
 ---
 
-# 📊 Conversion Funnel Analysis
+# Conversion Funnel Analysis
 
 <p align="center">
   <img src="plots/user_funnel.png" width="700">
@@ -246,7 +246,7 @@ Promotional campaigns and advertising could be optimized for peak activity hours
 
 ---
 
-# 🚀 Future Improvements
+# Future Improvements
 
 Potential extensions of this analysis include:
 
@@ -258,6 +258,6 @@ Potential extensions of this analysis include:
 
 ---
 
-# 📬 Author
+# Author
 
 Data analysis project created as part of a **Data Analytics portfolio**.
