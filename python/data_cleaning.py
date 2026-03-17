@@ -12,13 +12,13 @@ df = pd.read_csv(RAW_DATA_PATH)
 
 print("Initial shape:", df.shape)
 
-# удаляем строки без user_id
+# delete rows without user_id
 df = df.dropna(subset=["user_id"])
 
-# заполняем пропуски brand
+# fillna brand
 df["brand"] = df["brand"].fillna("unknown")
 
-# преобразуем время
+# change datetime
 df["event_time"] = pd.to_datetime(df["event_time"])
 
 df["date"] = df["event_time"].dt.date
